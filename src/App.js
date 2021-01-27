@@ -16,7 +16,7 @@ function App() {
     e.preventDefault();
     if (checkChoices()) {
       if (calculus) {
-        axios.post("http://localhost:8080/api/submit", {});
+        axios.post("http://localhost:8080/api/submit", choices);
         setSubmitted("choices have been submitted");
       } else {
         setError("must have the course calculus");
